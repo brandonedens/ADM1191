@@ -2,8 +2,14 @@
 name = "adm1191"
 version = "0.1.0"
 authors = ["Brandon Edens <brandonedens@gmail.com>"]
+license = "MIT OR Apache-2.0"
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+embedded-hal = "0.2.4"
+
+[dev-dependencies]
+linux-embedded-hal = "0.3"
+
+[profile.release]
+lto = true
